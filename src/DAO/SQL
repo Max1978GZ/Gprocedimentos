@@ -1,0 +1,104 @@
+CREATE TABLE CLIENTES(
+    IDCLIENTE INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1 ,INCREMENT BY 1),
+    CLIENTE VARCHAR(50),
+    NUMCARPETA VARCHAR(12),
+    DNI VARCHAR(12),
+    DIRECCION VARCHAR(150),
+    TELEFONO VARCHAR(12),
+    MOVIL VARCHAR(12),    
+    INFO VARCHAR(500)
+);
+
+CREATE TABLE PROCEDIMIENTOS(
+    IDPROCEDIMIENTO INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1 ,INCREMENT BY 1),
+    LOCALIDAD VARCHAR(20),
+    NUMJUZGADO INTEGER,
+    PROCEDIMIENTO VARCHAR(20),
+    INFO VARCHAR(500),
+    CONTRARIO VARCHAR(100),
+    ID_CLIENTE INTEGER,
+    RUTA_FICHEROS VARCHAR(20),
+    CONSTRAINT FK_CLIENTE_PROCEDIMIENTO FOREIGN KEY(ID_CLIENTE) REFERENCES CLIENTES (IDCLIENTE)
+
+);
+
+CREATE TABLE LOG(
+    ID INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1 ,INCREMENT BY 1),
+    LOG VARCHAR(1000)
+);
+
+
+/************************** MYSQL ******************************************************/
+
+
+CREATE TABLE CLIENTES(
+    IDCLIENTE INTEGER PRIMARY KEY  NOT NULL AUTO_INCREMENT,
+    CLIENTE VARCHAR(50),
+    NUMCARPETA VARCHAR(12),
+    DNI VARCHAR(12),
+    DIRECCION VARCHAR(150),
+    TELEFONO VARCHAR(12),
+    MOVIL VARCHAR(12),    
+    INFO VARCHAR(500)
+);
+
+
+
+CREATE TABLE PROCEDIMIENTOS(
+    IDPROCEDIMIENTO INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    LOCALIDAD VARCHAR(20),
+    NUMJUZGADO INTEGER,
+    PROCEDIMIENTO VARCHAR(20),
+    INFO VARCHAR(500),
+    CONTRARIO VARCHAR(100),
+    ID_CLIENTE INTEGER,
+    RUTA_FICHEROS VARCHAR(20),
+    CONSTRAINT FK_CLIENTE_PROCEDIMIENTO FOREIGN KEY(ID_CLIENTE) REFERENCES CLIENTES (IDCLIENTE)
+
+);
+
+CREATE TABLE LOG(
+    ID INTEGER PRIMARY KEY  NOT NULL AUTO_INCREMENT ,
+    LOG VARCHAR(1000)
+);
+
+
+
+
+Puedes apuntar tu dominio (Registro DNS "A") a este IP: 31.220.16.19
+ns1.hostinger.es 	31.170.163.241
+ns2.hostinger.es 	31.220.23.1
+ns3.hostinger.es 	173.192.183.247
+ns4.hostinger.es 	31.170.164.249
+Detalles del Sitio
+Accede a tu sitio en	http://coejo.besaba.com
+Accede a tu sitio con www.	http://www.coejo.besaba.com
+Vista previa de tu sitio en	Click aquí
+Dirección IP del Sitio	31.220.16.19
+Nombre del Servidor	server48.hostinger.es
+Detalles de E-mail
+Dirección Webmail	http://webmail.hostinger.es
+Usuario de sesión	Direción de E-mail del Usuario
+Contraseña	Contraseña de E-mail del Usuario
+Host POP3/IMAP	mx1.hostinger.es
+Puerto POP3	110
+Puerto IMAP	143
+Host SMTP	mx1.hostinger.es
+Puerto SMTP	2525
+Administrar Cuentas de E-mail	Administrar E-mails
+Detalles de Carga de Archivo
+IP FTP	31.220.16.19
+Nombre de Host FTP	ftp.coejo.besaba.com
+Usuario FTP	u695436362
+Contraseña FTP	••••••••••
+Puerto FTP	21
+Carpeta para Cargar Archivos	public_html
+¿Olvidaste Contraseña FTP?	Cambiar Contraseña de la Cuenta
+Clientes FTP Recomendados	SmartFTP o FileZilla
+Detalles del Creador de Sitios
+Elige una plantilla de sitio en	http://builder.hostinger.es
+Dominio de sesión	coejo.besaba.com
+Usuario	u695436362
+Contraseña	••••••••••
+
+
